@@ -5,7 +5,7 @@
  const searchResults=document.querySelector(".search-results");
  const showMore=document.getElementById("show-more-button");
  let inputData="";
- let page='one';
+ let page=1;
 
  async function searchImages(){
 
@@ -18,7 +18,7 @@
     console.log(data);
     const results=data?.results;
 
-    if(page== 'One'){
+    if(page== 1){
         searchResults.innerHTML="";
 
     }
@@ -47,7 +47,7 @@
  }
  formEl.addEventListener("submit",(event)=>{
     event.preventDefault();
-    page='one';
+    page=1;
     searchImages();
  });
  showMore.addEventListener("click",()=>{
