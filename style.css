@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins:wght@300&display=swap');
+/* default styling */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Borel', cursive;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    line-weight:1.6;
+}
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    text-align:center;
+    margin:40px 0 10px 0;
+}
+
+form{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:30px;
+
+}
+#search-input{
+    width: 40%;
+    max-width: 400px;
+    padding: 10px 20px ;
+    border-shadow: 0 0 100px rgb(0, 0, 0,10);
+    border-radius:100px;
+    font-size:20px;
+    color:red;
+    
+}
+#search-button{
+    padding:15px 25px;
+    background-color:rgb(13, 107, 13);
+    color:white;
+    border:none;
+    font-size: 18px;
+    box-shadow:0 0 6px rgba(0,0,0,0.2);
+    cursor:pointer;
+    border-radius:200px;
+   margin-left:2px;
+
+}    
+.search-results{
+    display:flex;
+    justify-content:space-between; 
+    flex-wrap:wrap;  
+    max-width:1500px;
+   margin:0 auto;
+}   
+ .search-result{
+  margin-buttom:60px;
+  width:30%;
+  height:100%;
+  border-radius: 5px;
+  box-shadow:0 0 6px rgba(0,0,0,0.2);
+  overflow:hidden;
+}
+.search-result img{
+    width: 100%;
+    height:auto;
+    object-fit:cover;
+    transition: opacity 0.2s ease-in-out;
+
+}
+.search-result:hover img{
+    opacity:0.8;
+    cursor:pointer;
+}
+.search-result a{
+      font-size:20px;
+      text-decoration:none;
+      color:#333;
+      display:block;
+      padding:10px;
+      text-transform:capitalize;
+}
+#show-more-button{
+    
+    background-color:#008cba;
+    color:#fff;
+    border:none;
+    font-size: 18px;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    text-align: center;
+    display:block;
+    border-radius:5px;
+   margin:30px auto;
+   display:none;
+}
+@media screen and (max-width: 768px) {
+    .search-results{
+        padding :20px;
+    }
+    .search-result {
+        width: 45%; /* Set it to 100% to make it full-width on smaller screens */
+        /* Add any other styles specific to smaller screens if needed */
+    }
+}
+@media screen and (max-width: 480px) {
+    .search-result {
+        width: 100%; /* Set it to 100% to make it full-width on smaller screens */
+        /* Add any other styles specific to smaller screens if needed */
+/* Increase font size for better readability on smaller screens */
+    }
+}
+
